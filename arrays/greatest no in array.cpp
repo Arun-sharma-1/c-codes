@@ -1,13 +1,15 @@
-  #include<stdio.h>
+   #include<stdio.h>
 int greatestno(int[],int n);
 int smallestno(int[],int n);
 int main(){
       int array[4] ,n;
-	  printf("enter the numbers  present in array:");
+	  printf("enter the numbers of element in  array:");
 	  scanf("%d",&n);
-      for(int i=0; i<n; i++)
-	  scanf("%d \t",&array[i]);	
+      for(int i=0; i<n; i++){
+     
+	  scanf("%d",&array[i]);	
  
+ }
       int min=smallestno(array,n);
       printf("%d is minimum", min);
       int max=greatestno(array,n);
@@ -16,7 +18,7 @@ int main(){
  int greatestno(int a[],int n){
      	int max=a[0];// this should be outside the loop otherwise it will check this condn n times
      	
- 	 for(int i=0; i<n; i++){
+ 	 for(int i=1; i<=n; i++){
 	   if(a[i]>max)
       	  max=a[i];
       }
